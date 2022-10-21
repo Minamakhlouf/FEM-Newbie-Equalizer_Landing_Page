@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+/* Giving global fonts for common patterns in website*/ 
+
+body {
+    background-image: url("assets/bg-main-mobile.png"); 
+    font-family: "IBM Plex Sans";
+}
+
+img {
+    max-width: 100%; 
+}
+
+.para {
+    font-size: 16px; 
+    line-height: 1.5; 
+    margin-top: 15px; 
+}
+
+button, .icon-container img {
+    cursor: pointer; 
+    transition: all 0.2s ease; 
+}
+
+/* Main at mobile */ 
+
+main {
+    padding: 24px; 
+    width: 375px; 
+    position: relative; 
+}
+
+.logo {
+    width: 147px; 
+}
+
+h1 {
+    font-size: 40px; 
+    margin-top: 30px; 
+}
+
+.bg-image {
+    display: none;
+}
+
+/* Style for content with phone image and card component */ 
+
+.content {
+    background-color: black; 
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    margin: 120px auto 0 auto; 
+    position: relative; 
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-bottom: 50px; 
+    width: 375px; 
+}
+
+.phone {
+    width: 50%; 
+    max-width: 210px; 
+    margin: 0 auto; 
+    transform: translatey(-80px); 
+    z-index: 5; 
+    position: relative; 
+}
+
+.background {
+    width: 280px; 
+    margin: 0 auto; 
+    position: absolute; 
+    top: 0; 
+    left: 50%; 
+    transform: translatex(-50%); 
+    z-index: 3; 
+}
+
+h3 {
+    display: flex; 
+    align-items: center;
+    font-size: 40px; 
+    gap: 10px; 
+    margin: 30px 0; 
+}
+
+h3 span {
+    font-size: 16px; 
+}
+
+.card {
+    background-color: #FA7453; 
+    padding: 32px 24px; 
+    color: white; 
+    position: relative; 
+    z-index: 5; 
+    border-radius: 15px; 
+    max-width: 375px; 
+    margin: 0 auto; 
+}
+
+.card button {
+    width: 100%; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    padding: 5px; 
+    border-radius: 10px; 
+    border: none; 
+    padding: 15px; 
+    font-family: "IBM Plex Sans"; 
+    font-weight: 700; 
+}
+
+.card button:first-of-type {
+    background: black; 
+    margin-bottom: 10px; 
+    color: white; 
+}
+
+.card button:first-of-type:hover {
+    background: #66E2DC; 
+    margin-bottom: 10px; 
+    color: white; 
+}
+
+.card button:hover {
+    background: #FFB964; 
+}
+
+.card img {
+    height: 16px; 
+}
+
+/* Footer Section */ 
+
+footer {
+    padding: 0 24px; 
+}
+
+.icon-container {
+    display: flex; 
+    gap: 20px; 
+    margin: 40px 0; 
+}
+
+.icon-container div {
+    width: 20px; 
+}
+
+.icon img:hover {
+    mask-image: url(assets/icon-facebook.svg); 
+    background-color: #FA7453;
+}
+
+footer a {
+    text-decoration: none;
+    color: black; 
+    font-weight: 700; 
+}
+
+/* Styling for area in between mobile and tablet */ 
+
+@media screen and (min-width: 380px) {
+    .logo, main {
+        display: block; 
+        margin-right: auto; 
+        margin-left: auto; 
+        text-align: center;
+    }
+    .icon-container {
+        justify-content: center;
+    }
+}
+
+/*Styling for tablet */ 
+
+@media screen and (min-width: 768px) {
+    main {
+        padding: 36px; 
+        margin-bottom: 180px; 
+        width: 100%; 
+        overflow: hidden; 
+        text-align: left;
+    }
+    .logo {
+        margin-left: 0; 
+    }
+    .text-block {
+        width: 520px; 
+    }
+    .bg-image {
+        display: block; 
+        position: absolute; 
+        top: -35px; 
+        right: -35px; 
+        width: 267px; 
+    }
+    h1 {
+        font-size: 60px; 
+    }
+    .card {
+        width: 399px; 
+        padding: 49px; 
+    }
+    .content {
+        margin: 0 36px; 
+        margin-top: 120px; 
+        width: 100%; 
+    }
+    .phone {
+        transform: translatey(-130px) translatex(-100%); 
+        position: relative; 
+        left: calc(50% - 35px); 
+        margin: 0 0 0 0; 
+        max-width: 270px; 
+    }
+    .card {
+        position: absolute; 
+        top: 30%;
+        left: calc(50% - 120px);   
+        max-width: 400px;
+    }
+    footer {
+        padding: 36px; 
+        margin-top: 100px; 
+    }
+    .footer-text {
+        display: flex; 
+        justify-content: space-between;
+    }
+    .footer-text .para {
+        width: 366px; 
+    }
+}
+
+/* Styling for desktop */
+@media screen and (min-width: 1110px) {
+    main {
+        padding: 0; 
+        width: 100%; 
+    }
+    .main-content-container {
+        width: 1110px; 
+        margin: 36px auto 0 auto; 
+    }
+    .text-block h1 {
+        width: 1015px; 
+        font-size: 88px; 
+    }
+    .text-block p {
+        width: 825px; 
+        font-size: 20px; 
+    }
+    .bg-image {
+        right: 0; 
+        width: 312px; 
+        top: -40px; 
+        z-index: -6; 
+    }
+    .content {
+        width: 1110px; 
+        margin: 300px auto 150px auto; 
+    }
+    .content .para {
+        font-size: 20px; 
+    }
+    .phone {
+        max-width: 312px; 
+        transform: translateY(-215px) translatex(-100%); 
+        left: calc(50% - 70px) 
+    }
+    .card {
+        max-width: 446px; 
+        padding: 57px; 
+        position: absolute; 
+        right: 50%; 
+        transform: translatex(50%); 
+        top: 20%; 
+    }
+    .card h2 {
+        font-size: 45px; 
+    }
+    .para {
+        line-height: 1.7; 
+    }
+    h3 {
+        font-size: 52px; 
+        margin: 40px 0; 
+    }
+    footer {
+        width: 1110px; 
+        margin-left: auto; 
+        margin-right: auto; 
+        padding-left: 0; 
+        padding-right: 0; 
+        display: flex;
+        gap: 50px;  
+        align-items: flex-start;
+    }
+    .footer-text {
+        width: 100%; 
+    }
+    footer .para {
+        margin-top: 0; 
+    }
+    .icon-container {
+        align-self: center;
+        margin: 0; 
+    }
+}
